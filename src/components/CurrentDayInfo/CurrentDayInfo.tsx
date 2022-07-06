@@ -7,7 +7,7 @@ import { CurrentWeatherState } from "../../interfaces";
 export const infoItems = (info: CurrentWeatherState) => [
   { text: "HUMEDAD", value: `${info.humidity} %`, id: "currentInfoHumidity" },
   {
-    text: "SENSASIÓN TÉRMICA",
+    text: "SENSACIÓN TÉRMICA",
     value: `${info.feels_like} C°`,
     id: "currentInfoFeelsLike",
   },

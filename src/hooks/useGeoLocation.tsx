@@ -9,16 +9,15 @@ const options = {
   maximumAge: 0,
 };
 
+const locationDataDefault = {
+  lat: "",
+  lng: "",
+  isError: false,
+};
 export const useGeoLocation = () => {
   const { pathname } = useLocation();
 
-  const [locationData, setLocationData] = useState({
-    lat: "",
-    lng: "",
-    isError: "",
-  });
-
-  console.log(locationData);
+  const [locationData, setLocationData] = useState(locationDataDefault);
 
   const getGeoLocation = () => {
     navigator.geolocation.getCurrentPosition(success, error, options);
@@ -34,17 +33,16 @@ export const useGeoLocation = () => {
       });
     }
 
-    function error(error: any) {
+    function error() {
       setLocationData({
         ...locationData,
-        isError: error,
+        isError: true,
       });
     }
   };
 
-  console.log(pathname);
-
   useEffect(() => {
+    setLocationData(locationDataDefault);
     switch (pathname) {
       case "/your-city":
         getGeoLocation();

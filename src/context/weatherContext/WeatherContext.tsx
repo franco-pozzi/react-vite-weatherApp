@@ -61,7 +61,10 @@ export const WeatherProvider: FC<providerProps> = ({ children }) => {
         }),
       ]).then(() => setWeatherLoading(false));
     }
-  }, [locationData.lng, locationData.lat]);
+    if (locationData.isError) {
+      setIsError(true);
+    }
+  }, [locationData.lng, locationData.lat, locationData.isError]);
 
   const getCurrentWeather = async ({
     lon,

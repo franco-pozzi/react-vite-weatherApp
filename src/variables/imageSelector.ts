@@ -1,0 +1,17 @@
+export const imageSelector = {
+  Ash: "/src/assets/ash.jpg",
+  Clouds: "/src/assets/brokenClouds.jpg",
+  Clear: "/src/assets/clearSky.jpg",
+  Dust: "/src/assets/dust.jpg",
+  Fog: "/src/assets/fog.jpg",
+  Haze: "/src/assets/haze.jpg",
+  Mist: "/src/assets/mist.jpg",
+  Drizzle: "/src/assets/drizzle.jpg",
+  Rain: "/src/assets/rain.jpg",
+  Sand: "/src/assets/sand.jpg",
+  Smoke: "/src/assets/smoke.jpg",
+  Snow: "/src/assets/snow.jpg",
+  Squall: "/src/assets/squall.jpg",
+  Thunderstorm: "/src/assets/thunderStorm.jpg",
+  Tornado: "/src/assets/tornado.jpg",
+};
